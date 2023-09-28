@@ -31,6 +31,31 @@
 
 }
 
+body {
+  &.home2 {
+    .header {
+      &::before {
+        background: linear-gradient(180deg, $main-color 30%, rgba(255, 255, 255, 0) 100%);
+      }
+      .header-menu {
+        .menu {
+          ul {
+            li {
+              a {
+                color: #fff;
+
+                &:hover, &.active {
+                  color: $green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .header-container {
   width: 100%;
   padding: vw(36px) 0 vw(24px);
@@ -1116,4 +1141,56 @@
 
 .burger {
   display: none;
+}
+
+.hero-second {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .bg {
+    background: #1E649F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: luminosity;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+  }
+}
+
+.hero-second__bg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: vw(90px);
+  padding-top:vw(90px);
+
+  h1 {
+    color: #FFF;
+    font-size: vw(74px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: vw(50px);
+  }
 }

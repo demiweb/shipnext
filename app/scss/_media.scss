@@ -49,6 +49,19 @@
 }
 
 @media screen and (max-width: 767px) {
+  .home-hero__bg {
+    padding-top: vw(212px);
+  }
+
+  .possibilities-list .btn {
+    border-radius: 50px;
+
+    background: linear-gradient(180deg,#88e525 0,#57a407 100%);
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.25);
+    &::before, &::after {
+      content: '';
+    }
+  }
   .starts-list {
     width: 100%;
     margin-left: 0;
@@ -137,6 +150,7 @@
       font-size: vw(24px);
       line-height: 1.3;
       margin-bottom: vw(5px);
+      text-align: center;
     }
 
     p {
@@ -261,6 +275,23 @@
       }
       .header-menu .menu {
         transform: translate(0, 0);
+      }
+    }
+  }
+  body {
+    &.home2 {
+      .header {
+        .burger {
+          span {
+            background: #fff;
+          }
+        }
+        .menu {
+          background: $main-color;
+        }
+        &.active, &.header-fixed {
+          background: $main-color;
+        }
       }
     }
   }
@@ -429,6 +460,17 @@
 
     .text {
       width: 100%;
+    }
+  }
+  .hero-second {
+  }
+  .hero-second__bg {
+    padding-bottom: 120px;
+    padding-top: 57px;
+    h1 {
+      font-size: vw(26px);
+      line-height: 1.2;
+      margin-bottom: vw(23px);
     }
   }
   .home-hero__text {
